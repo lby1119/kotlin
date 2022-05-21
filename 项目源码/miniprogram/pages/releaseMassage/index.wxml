@@ -1,0 +1,69 @@
+<!--pages/releaseMassage/index.wxml-->
+<van-cell-group>
+  <van-field
+    model:value="{{ title }}"
+    required
+    clearable
+    label="标题"
+    
+    placeholder="请输入标题"
+    
+  />
+
+   <van-field
+    model:value="{{ username }}"
+    required
+    clearable
+    label="发布团队"
+   
+    placeholder="请输入发布团队"
+    
+  />
+
+  <van-field
+    model:value="{{ province }}"
+    required
+    clearable
+    label="省份"
+   
+    placeholder="请输入所在省份：xx省"
+    
+  />
+
+   <van-field
+    model:value="{{ telephone }}"
+    required
+    clearable
+    label="电话"
+   
+    placeholder="请输入电话"
+    
+  />
+
+   <van-field
+    model:value="{{ message }}"
+    required
+    label="详情"
+    type="textarea"
+    placeholder="请输入详细信息"
+    autosize
+    
+  />
+
+  
+</van-cell-group>
+
+
+<view class="box_text" wx:if="{{!imgSrc}}">上传的图片将展示在这里</view>
+<view  wx:if="{{imgSrc}}" class="code_box">
+    <image class="code_img" src="{{imgSrc}}"></image>
+    <!-- <view class="img_info">
+      <view class="img_info_title">文件路径</view>
+      <view class="img_info_detail">{{imgSrc}}</view>
+    </view> -->
+  </view>
+  <view class="button" bindtap="uploadImg" wx:if="{{!haveGetImgSrc}}">上传一张图片</view>
+  <view class="button" bindtap="realseMassage" wx:if="{{haveGetImgSrc}}">
+     发布信息
+ 
+  </view>

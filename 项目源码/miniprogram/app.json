@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/myMassage/index",
+    "pages/searchMassage/index",
+    "pages/login/index",
+    "pages/releaseMassage/index",
+    "pages/sign/index",
+    "pages/message/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "乡村志愿服务",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "white",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "信 息",
+        "iconPath": "icons/love.png",
+        "selectedIconPath": "icons/love_select.png"
+      },
+   
+      {
+        "pagePath": "pages/sign/index",
+        "text": "签 到",
+        "iconPath": "icons/sign.png",
+        "selectedIconPath": "icons/sign_select.png"
+      },
+      {
+        "pagePath": "pages/searchMassage/index",
+        "text": "查 询",
+        "iconPath": "icons/search.png",
+        "selectedIconPath": "icons/search_select.png"
+      },
+      {
+        "pagePath": "pages/myMassage/index",
+        "text": "我   的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

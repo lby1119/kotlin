@@ -1,0 +1,27 @@
+.code_box {
+  text-align: center;
+  background-color: white;
+  margin-top: 0rpx;
+  padding: 50rpx 0 17px 0;
+}
+.code_img {
+  width: 270px;
+  height: 220px;
+}
+.button {
+  width: 300rpx;
+  text-align: center;
+  margin: 5px auto 0 auto;
+  height: 80rpx;
+  color: white;
+  border-radius: 5px;
+  line-height: 80rpx;
+  background-color: #07c160;
+}
+.box_text {
+  background-color: white;
+  text-align: center;
+  padding: 300rpx 0;
+  margin-top: 0rpx;
+  color: rgba(0, 0, 0, 0.5);
+}

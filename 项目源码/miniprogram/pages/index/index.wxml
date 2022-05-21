@@ -1,0 +1,115 @@
+<!--index.wxml-->
+<view class="container">
+
+
+<!-- 头部三信息 -->
+<van-grid clickable column-num="3" gutter="{{ 30}}" icon-size="40">
+  <van-grid-item
+    icon="/icons/public.png"
+    
+    link-type="reLaunch"
+    url="/pages/releaseMassage/index"
+    text="发志愿"
+  />
+ <van-grid-item
+     
+     icon="/icons/select.png"
+    link-type="reLaunch"
+    url="/pages/searchMassage/index"
+    text="找志愿"
+  />
+  <van-grid-item
+     
+     icon="/icons/my.png"
+    link-type="reLaunch"
+    url="/pages/myMassage/index"
+    text="看自己"
+  />
+</van-grid>
+
+
+
+ <!-- 轮播图 开始 -->
+  <view class="index_swiper">
+    <!-- 
+      1 swiper标签存在默认的宽度和高度
+        100% * 150px 
+      2 image标签也存在默认的宽度和高度
+        320px * 240px 
+      3 设计图片和轮播图
+        1 先看一下原图的宽高  750 * 340 
+        2 让图片的高度自适应 宽度 等于100%
+        3 让swiper标签的高度 变成和图片的高一样即可 
+      4 图片标签
+        mode属性 渲染模式
+          widthFix  让图片的标签宽高 和 图片标签的内容的宽高都等比例的发生变化 
+     -->
+    <swiper autoplay indicator-dots circular>
+      <swiper-item
+      wx:for="{{swiperList}}"
+      wx:key="goods_id"
+
+      >
+      <!-- url="{{item.navigator_url}}" -->
+        <navigator >
+          <image mode="widthFix" src="{{item.url}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 轮播图 结束 -->
+
+
+
+<!-- 推荐活动和更多 -->
+<view class="con_list">
+  
+      <view class="txt_list1">推荐活动</view>
+
+      <view class="txt_list2">
+        <navigator 
+         open-type="redirect" url="/pages/searchMassage/index"
+        >
+        更多
+        </navigator>
+        
+        </view>
+  
+ 
+</view>
+
+<!-- 活动 -->
+
+<view class="activitylist" wx:for="{{activityLists}}">
+  
+  <view class="activity">
+      <image src="{{item[0].imageUrl}}" style="width: 125px;height: 125px;"></image>
+      <view class="title">{{item[0].title}}</view>
+  </view> 
+
+  <view class="activity">
+      <image src="{{item[1].imageUrl}}" style="width: 125px;height: 125px;"></image>
+      <view class="title">{{item[1].title}}</view>
+  </view> 
+  
+
+
+
+</view>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+</view>

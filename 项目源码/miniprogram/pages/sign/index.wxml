@@ -1,0 +1,66 @@
+
+<view wx:if="{{hasUserInfo}}" >
+  <view class="context">
+
+  <view class="top">
+    <image src="../../icons/sign.png" bindtap="bindPreMonth"></image>
+    <view>{{year}}年{{month}}月</view>
+    <image src="../../icons/sign.png" bindtap="bindNextMonth"></image>
+  </view>
+ 
+<view  class="middle">
+  <view wx:for="{{data_arr}}" wx:key="index" class="middle_num">
+    {{item}}
+  </view>
+</view>
+ 
+<!-- class='{{((index+1 in signList[0]) ? "active": "calen_num")}}'  -->
+ <!-- ((index+1 in signList[0])|| (index+1 in signList[1])||(index+1 in signList[2])||(index+1 in signList[3])||(index+1 in signList[4])||(index+1 in signList[5])||(index+1 in signList[6])||(index+1 in signList[7])||(index+1 in signList[8])||(index+1 in signList[9])||(index+1 in signList[10])||(index+1 in signList[11])) -->
+<view class="calen">
+ 
+  <view wx:for="{{startWeek}}" wx:key="index" class="calen_blank"></view>
+  
+  <view wx:for="{{currentMonthDays}}" 
+    wx:key="index" class="calen_num">
+
+   {{index+1}}
+  <view  wx:for="{{signList[month-1]}}" wx:key="in" wx:for-index="in">
+  
+    <view wx:if="{{(index+1) == item}}" class='"active"' >
+      √
+       
+    </view>
+    
+  </view>
+
+  
+
+  <!-- {{index+1}} -->
+  </view>
+
+
+
+  
+</view>
+
+</view>
+
+<button bindtap="qiandao">签到</button>
+ 
+<view class="date">
+  <text>已连续签到</text>
+  <view class="num">{{num}}</view>
+  <text>天</text>
+</view>
+ 
+<view class="fighting">
+ 
+  <text>加油！</text>
+</view>
+</view>
+
+<!-- <view wx:else>
+   <navigator url="/pages/login/index" >登录</navigator>
+</view> -->
+
+

@@ -1,0 +1,26 @@
+<!--pages/searchMassage/index.wxml-->
+<van-dropdown-menu>
+  <van-dropdown-item model:value="{{ value1 }}" options="{{ option1 }}" bind:change='option1Change' />
+  <van-dropdown-item model:value="{{ value2 }}" options="{{ option2 }}"  bind:change='provinceChange' />
+
+</van-dropdown-menu>
+
+
+<!-- 活动 -->
+
+<view class="activitylist" wx:for="{{activityLists}}">
+  
+  <view class="activity">
+      <image src="{{item[0].imageUrl}}" style="width: 125px;height: 125px;"></image>
+      <view class="title">{{item[0].title}}</view>
+  </view> 
+
+  <view class="activity">
+      <image src="{{item[1].imageUrl}}" style="width: 125px;height: 125px;"></image>
+      <view class="title">{{item[1].title}}</view>
+  </view> 
+  
+
+
+
+</view>

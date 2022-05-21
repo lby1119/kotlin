@@ -1,0 +1,1 @@
+"D:\wechart\微信web开发者工具\cli.bat" cloud functions deploy --e springboot-3g3342h886a42d9f --n quickstartFunctions --r --project "C:\Users\11346\Desktop\wx\test04\" --report_first --report
