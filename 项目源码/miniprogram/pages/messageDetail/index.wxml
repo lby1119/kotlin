@@ -1,0 +1,34 @@
+<!--pages/message/index.wxml-->
+<view class="image" >
+    <image src="{{imgurl}}" style="width: 100%;height: 100%;"/>
+</view>
+
+<view class="open">
+      
+      
+
+      <view class="openmessage">志愿名称：{{title}}</view>
+        <view  class="openmessage">电话号码：{{telephone}}</view>
+        <view  class="openmessage">服务省份：{{province}}</view>
+
+       
+</view>
+
+<view class="detail">
+        <view class="openmessage">
+            活动详情
+        </view>
+        <view  class="opendetail">{{detail}}</view> 
+</view>
+
+
+
+<view class="comment">
+     <view class="opencomment" bindtap="comment">
+            留言
+        </view>
+        <textarea model:value="{{comment}}" class="opendetail" ></textarea> 
+        <view  class="button" bindtap="enroll">
+           报名
+         </view>
+</view>

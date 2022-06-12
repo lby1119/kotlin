@@ -6,7 +6,9 @@
     "pages/login/index",
     "pages/releaseMassage/index",
     "pages/sign/index",
-    "pages/message/index"
+    "pages/messageDetail/index",
+    "pages/mydata/index",
+    "pages/introduce/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -28,7 +30,6 @@
         "iconPath": "icons/love.png",
         "selectedIconPath": "icons/love_select.png"
       },
-   
       {
         "pagePath": "pages/sign/index",
         "text": "签 到",

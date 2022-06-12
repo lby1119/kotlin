@@ -1,3 +1,4 @@
 # kotlin
 
-hello world
+本项目是关于智能移动开发课程相关作业
+

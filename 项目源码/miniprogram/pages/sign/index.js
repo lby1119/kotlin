@@ -34,7 +34,9 @@ Page({
       title: '今日已成功签到',
       duration:2000
     })
-    num++
+    num=1+this.data.num
+    // console.log(this.data.num)
+    // console.log(num+'aaa')
     let cloudId=wx.getStorageSync('cloudId')
     let list=this.data.signList
     list[new Date().getMonth()].push(new Date().getDate())
@@ -73,11 +75,12 @@ Page({
     
     this.setData({
       num:num,
-      today:todaylist
+      today:todaylist,
+      signList:list
     })
-    // console.log(todaylist);
- 
-    this.getUserSign()
+    
+    
+    this.showCalendar()
    
     
 }
@@ -109,7 +112,7 @@ else{
          num:res.result.num
        })
        
-       console.log(that.data.num)
+     
       
       },
       fail: console.error
@@ -124,7 +127,7 @@ else{
     
     
  
-   let number = wx.getStorageSync('num')   
+  //  let number = wx.getStorageSync('num')   
    let day = wx.getStorageSync('day')
    let getmonth =wx.getStorageSync('month')
    let nowlist = this.data.nowlist
@@ -133,12 +136,11 @@ else{
      month:getmonth
    })
     this.setData({
-      num:number,
+      // num:number,
      today:nowlist,
      hasUserInfo:HasUserInfo
     })
-    // console.log(this.data.hasUserInfo)
-    // console.log(this.data.today)
+   
     let now = new Date()
     let year = now.getFullYear()
     // month获取是从 0~11
@@ -155,9 +157,10 @@ else{
         url: '/pages/myMassage/index'
       })
     }
-    this.showCalendar()
     this.getUserSign()
-    
+    this.showCalendar()
+   
+ 
   },
 
 
@@ -176,14 +179,11 @@ else{
         duration:2000
       })
       
-      // wx.reLaunch({
-      //   url: '/pages/myMassage/index'
-      // })
+    
     }
     this.getUserSign()
-    // console.log('this.data.today')
-    // console.log(this.data.today)
-    // console.log(this.data.hasUserInfo)
+    this.showCalendar()
+    
   },
 
 

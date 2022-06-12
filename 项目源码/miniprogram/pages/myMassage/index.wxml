@@ -23,14 +23,16 @@
        <navigator  
          open-type="redirect" url="/pages/mydata/index"
          class="app_info_item"
-        >个人信息档案</navigator>
-        <!-- <navigator  class="app_info_item">我的沟通模型</navigator>
-         <navigator  class="app_info_item">端口选择</navigator> -->
-      <view class="app_info_item">关于我们</view>
+        >已报名活动及评论</navigator>
+        
+         <navigator  
+         open-type="redirect" url="/pages/introduce/index"
+         class="app_info_item"
+        >关于我们</navigator>
     </view>
     <!-- 推荐 -->
-    <view class="recommend_wrap">
+    <!-- <view class="recommend_wrap">
       把应用推荐给其他人
-    </view>
+    </view> -->
   </view>
 </view>

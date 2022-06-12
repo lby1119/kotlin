@@ -60,7 +60,7 @@ Page({
     //活动数组
     activityList:[],
     activityLists:[],
-    
+    imgUrl:''
   },
 
   async getActivityList(){
@@ -211,6 +211,14 @@ Page({
   // option1改变时调用
   option1Change(){
     this.getHotActivity()
+  },
+
+  getDetail(e){
+    var imgurl=e.currentTarget.id
+    wx.setStorageSync('img', imgurl)
+    wx.navigateTo({
+      url: '../messageDetail/index',
+    })
   },
 
   /**

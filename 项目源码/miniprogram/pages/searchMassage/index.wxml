@@ -10,14 +10,19 @@
 
 <view class="activitylist" wx:for="{{activityLists}}">
   
-  <view class="activity">
-      <image src="{{item[0].imageUrl}}" style="width: 125px;height: 125px;"></image>
-      <view class="title">{{item[0].title}}</view>
+  <view class="activity" bindtap="getDetail" id="{{item[0].imageUrl}}">
+   
+        <image src="{{item[0].imageUrl}}" style="width: 125px;height: 125px;"></image>
+       <view class="title">{{item[0].title}}</view>
+       
+      
   </view> 
 
-  <view class="activity">
-      <image src="{{item[1].imageUrl}}" style="width: 125px;height: 125px;"></image>
+  <view class="activity" bindtap="getDetail" id="{{item[1].imageUrl}}">
+    
+      <image src="{{item[1].imageUrl}}" style="width: 125px;height: 125px;" ></image>
       <view class="title">{{item[1].title}}</view>
+    
   </view> 
   
 

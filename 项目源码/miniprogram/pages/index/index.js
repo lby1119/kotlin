@@ -30,9 +30,13 @@ Page({
     
     },
 
-    // showactivity(){
-    //   console.log(this.data.activityList)
-    // },
+    getDetail(e){
+      var imgurl=e.currentTarget.id
+      wx.setStorageSync('img', imgurl)
+      wx.navigateTo({
+        url: '../messageDetail/index',
+      })
+    },
 
   
      async getActivityList(){

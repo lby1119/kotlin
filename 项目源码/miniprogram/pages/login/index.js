@@ -23,11 +23,27 @@ Page({
     wx.setStorageSync('cloudId', res.cloudID);
     wx.setStorageSync('userinfo', res.userInfo);
     wx.setStorageSync('hasUserInfo',true);
+
+    wx.cloud.callFunction({
+      // 云函数名称
+      name: 'sign',
+      // 传给云函数的参数
+      data: {
+       
+      },
+      success: function(res) {
+      
+       
+      },
+      fail: console.error
+    });
+  
+
     wx.navigateBack({
       delta: 1
     });
-    // console.log(res)
-    // console.log(this.data.cloudId)
+    
+
 
    }
 })

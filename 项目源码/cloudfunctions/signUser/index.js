@@ -15,15 +15,15 @@ exports.main = async (event, context) => {
     openid:OPENID
   }).get()
 
-  console.log(res.data.length)
   
-
+  
   if(res.data.length==0){
    await db.collection('users').add({
       data:{
         openid:OPENID,
         num:event.num,
         list:event.list,
+        enroll:0,
       }
     })
   //  console.log("aaa")

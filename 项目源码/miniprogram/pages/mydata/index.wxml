@@ -1,0 +1,41 @@
+<view class="user_info_wrap">
+  <view wx:if="{{userinfo.nickName}}" class="user_img_wrap">
+    <image class="user_bg" src="{{userinfo.avatarUrl}}" ></image>
+    <view class="user_info">
+      <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+      <view class="user_name">{{userinfo.nickName}}</view>
+    </view>
+  </view>
+  <view wx:else class="user_btn">
+    <navigator url="/pages/login/index" >登录</navigator>
+  </view>
+</view>
+
+<view class="open">
+已报名活动：
+
+<view wx:for="{{enroll}}" class="openmessage">
+
+  {{item}}
+</view>
+
+ </view>
+
+ <view class="open_1">
+   
+   活动评论：
+
+   <view wx:for="{{comments}}" class="openmessage">
+     {{item[0]}}:{{item[1]}}
+   </view>
+ </view>
+
+ <view class="open_1">
+   
+   <view class="openmessage">
+   当前你共参加{{enroll.length}}个活动，评论{{comments.length}}条
+   </view>
+    <view class="openmessage">
+   当前你是{{star}}星志愿者
+   </view>
+ </view>

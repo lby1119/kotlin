@@ -1,4 +1,4 @@
-const envList = [{"envId":"springboot-3g3342h886a42d9f","alias":"springboot"}]
+const envList = [{"envId":"cloud-2g2u8rom5ed4a2a8","alias":"cloud"}]
 const isMac = false
 module.exports = {
     envList,
